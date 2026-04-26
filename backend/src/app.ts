@@ -1,14 +1,11 @@
 import express from 'express';
+import taskRoutes from "./routes/TaskRoutes.js";
 
 
 const app = express();
 
 app.use(express.json());
-
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
+app.use(taskRoutes);
 
 
 export default app;
